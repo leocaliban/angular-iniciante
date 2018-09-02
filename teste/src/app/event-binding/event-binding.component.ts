@@ -12,18 +12,12 @@ export class EventBindingComponent implements OnInit {
 
   constructor() { }
 
-  cadastrarDespesa() {
-    console.log(`Cadastrando ${this.descricao}`);
-    this.descricao = 'Almoço';
-    this.valor = 18;
+  cadastrarDespesa(valor: number) {
+    this.valor = valor;
   }
 
   alterarDescricao(event: any) {
     this.descricao = event.target.value;
-  }
-
-  alterarValor(event: any) {
-    this.valor = event.target.value;
   }
 
   ngOnInit() {

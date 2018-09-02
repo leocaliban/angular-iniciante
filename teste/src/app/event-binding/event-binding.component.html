@@ -14,11 +14,10 @@
       </div>
       <div class="form-group">
         <label for="valor">Valor</label>
-        <input type="text" class="form-control" id="valor"
-          placeholder="Digite o valor" (input)="alterarValor($event)">
+        <input type="text" class="form-control" id="valor" placeholder="Digite o valor" #valorInput>
       </div>
 
-      <button type="button" class="btn btn-primary" (click)="cadastrarDespesa()">Cadastrar</button>
+      <button type="button" class="btn btn-primary" (click)="cadastrarDespesa(valorInput.value)">Cadastrar</button>
     </form>
   </div>
 </div>

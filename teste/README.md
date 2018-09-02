@@ -34,7 +34,7 @@ A interpolação `{{}}` permite que o template acesse algum dado disponível do 
 É possível chamar variáveis, métodos e realizar operações matemáticas do typescript.
 
 ### Template
-```
+```html
 <h2>
   Nome: {{nome}}
 </h2>
@@ -66,4 +66,36 @@ export class NovoComponenteComponent{
 Um event binding `(click)="chamaMetodo()"` captura uma ação realizada no template para que ocorra alguma ação partindo do componente, neste caso o componente ouviu do template um click e executou um método.
 
 Outra forma (menos usada) de representar um event binding `on-click="chamaMetodo()"`.
+
+## Usando Variável de Referência
+
+Uma váriável de referência `#nomeDaVariavel` captura uma referência do próprio elemento localizado no template e seu escopo é de template.
+
+### Exemplo:
+
+- Criamos um input, e definimos uma variável de referência para ele `#valorInput`.
+```html
+  <input type="text" #valorInput>
+```
+
+- No botão vamos criar um binding de click e chamar o método `cadastrarDespesa()`, nesse método passaremos como parâmetro a variável definida no input `valorInput.value` para que o componente receba o valor digitado no input.
+```html
+  <button type="button" (click)="cadastrarDespesa(valorInput.value)">Cadastrar</button>
+```
+
+- O componente recebe o valor do input e atualiza a variável `valor`
+```typescript
+//...
+export class EventBindingComponent {
+  valor = 0;
+
+  cadastrarDespesa(valor: number) {
+    this.valor = valor;
+  }
+//...
+```
+#### Visualização
+![03](https://user-images.githubusercontent.com/23413093/44952756-f0cda280-ae5d-11e8-8388-46a5af3ae296.png)
+
+
 
