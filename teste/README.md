@@ -1,3 +1,9 @@
+# Primeiros passos
+
+* Criar projeto
+* Criar componente
+* Aplicar bootstrap
+
 ## Criando primeiro projeto angular
 
 No repositório desejado execute `ng new teste` para criar um projeto angular chamado teste
@@ -14,5 +20,10 @@ Para acessar a aplicação abra o endereço `http://localhost:4200/` no navegado
 
 Para criar um novo componente execute `ng generate component novo-componente` ou `ng g c novo-componente`.
 
-Para desabilitar a criação do spec.ts ao gerar um novo componente execute `ng g c novo-componente --spec=false`.
+Para desabilitar a criação do arquivo spec.ts ao gerar um novo componente execute `ng g c novo-componente --spec=false`.
+
+## Aplicando bootstrap
+
+Para aplicar o Bootstrap da versão mais recente execute `npm install bootstrap --save` ou `npm i bootstrap --save`.
+*`--save` já aplica o Bootstrap no package.json*
 
