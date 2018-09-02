@@ -61,3 +61,9 @@ export class NovoComponenteComponent{
 ### Visualização
 ![02](https://user-images.githubusercontent.com/23413093/44951998-d7baf680-ae49-11e8-96db-c25946f4c5bf.png)
 
+## Usando Event Binding
+
+Um event binding `(click)="chamaMetodo()"` captura uma ação realizada no template para que ocorra alguma ação partindo do componente, neste caso o componente ouviu do template um click e executou um método.
+
+Outra forma (menos usada) de representar um event binding `on-click="chamaMetodo()"`.
+

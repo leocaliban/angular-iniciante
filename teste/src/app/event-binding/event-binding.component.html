@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="alert alert-primary" role="alert">
+    Despesa: <strong>{{descricao}}</strong>
+    valor <strong>{{valor}}</strong> reais.
+  </div>
+
+  <h3>Cadastro de despesas</h3>
+  <div class="container">
+    <form>
+      <div class="form-group">
+        <label for="descricao">Descrição</label>
+        <input type="text" class="form-control" id="descricao"
+          placeholder="Digite a descrição" (input)="alterarDescricao($event)">
+      </div>
+      <div class="form-group">
+        <label for="valor">Valor</label>
+        <input type="text" class="form-control" id="valor"
+          placeholder="Digite o valor" (input)="alterarValor($event)">
+      </div>
+
+      <button type="button" class="btn btn-primary" (click)="cadastrarDespesa()">Cadastrar</button>
+    </form>
+  </div>
+</div>
