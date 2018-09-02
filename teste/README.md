@@ -102,7 +102,9 @@ export class EventBindingComponent {
 O uso do property binding permite interagir com as propriedades do html ou dos componentes customizados e funciona de forma semelhante a interpolação.
 Property binding pode vincular uma propriedade de um elemento à uma expressão typeScript.
 
-- Declarada com o prefixo bind `bind-propriedadeDoElemento="variavelDoComponente"` ou `[propriedadeDoElemento]="variavelDoComponente"`.
+- Declarada com o prefixo bind `bind-propriedadeDoElemento="variavelDoComponente"`. 
+Ou 
+- `[propriedadeDoElemento]="variavelDoComponente"`.
 
 ### Exemplo:
 
@@ -112,3 +114,12 @@ Property binding pode vincular uma propriedade de um elemento à uma expressão 
 ```
 #### Visualização
 ![04](https://user-images.githubusercontent.com/23413093/44952922-89b1ed00-ae61-11e8-9244-dcb971e9f18e.png)
+
+## Usando Two-way data binding
+
+Two-way data binding faz a via dupla da interação componente/template.
+`[(ngModel)]="variavelDoComponente"`
+
+Se a propriedade estiver dentro de um form é preciso usar também `[ngModelOptions]="{standalone: true}"`.
+
+*Importar o `FormsModule` no módulo que será usado.*

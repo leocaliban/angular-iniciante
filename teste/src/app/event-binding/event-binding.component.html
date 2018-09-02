@@ -6,11 +6,10 @@
 
   <h3>Cadastro de despesas</h3>
   <div class="container">
-    <form>
       <div class="form-group">
-        <label for="descricao">Descrição</label>
-        <input type="text" class="form-control" id="descricao"
-          placeholder="Digite a descrição" (input)="alterarDescricao($event)">
+        <label for="descricao-id">Descrição</label>
+        <input type="text" class="form-control" id="descricao-id"
+          placeholder="Digite a descrição" [(ngModel)]="descricao">
       </div>
       <div class="form-group">
         <label for="valor">Valor</label>
@@ -21,6 +20,5 @@
         [disabled]="descricao.length == 0">
         Cadastrar
       </button>
-    </form>
   </div>
 </div>

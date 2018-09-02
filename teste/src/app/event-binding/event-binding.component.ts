@@ -16,10 +16,6 @@ export class EventBindingComponent implements OnInit {
     this.valor = valor;
   }
 
-  alterarDescricao(event: any) {
-    this.descricao = event.target.value;
-  }
-
   ngOnInit() {
   }
 
