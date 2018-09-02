@@ -25,5 +25,22 @@ Para desabilitar a criação do arquivo spec.ts ao gerar um novo componente exec
 ## Aplicando bootstrap
 
 Para aplicar o Bootstrap da versão mais recente execute `npm install bootstrap --save` ou `npm i bootstrap --save`.
-*`--save` já aplica o Bootstrap no package.json*
 
+*O `--save` já aplica o Bootstrap no package.json*.
+
+## Interpolações
+
+A interpolação `{{}}` permite que o template acesse algum dado disponível do componente.
+É possível chamar variáveis, métodos e realizar operações matemáticas do typescript.
+
+```
+<h2>
+  Nome: {{nome}}
+</h2>
+<h3>
+  Idade: {{getIdade()}}
+</h3>
+<h3>
+  Soma 1+1 = {{1+1}}
+</h3>
+```

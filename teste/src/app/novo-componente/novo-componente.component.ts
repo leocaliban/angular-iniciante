@@ -9,6 +9,13 @@ export class NovoComponenteComponent implements OnInit {
 
   constructor() { }
 
+  nome = 'Jack Bauer';
+  idade = 35;
+
+  getIdade() {
+    return this.idade;
+  }
+
   ngOnInit() {
   }
 
