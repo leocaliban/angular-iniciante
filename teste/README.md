@@ -33,6 +33,7 @@ Para aplicar o Bootstrap da versão mais recente execute `npm install bootstrap 
 A interpolação `{{}}` permite que o template acesse algum dado disponível do componente.
 É possível chamar variáveis, métodos e realizar operações matemáticas do typescript.
 
+### Template
 ```
 <h2>
   Nome: {{nome}}
@@ -44,3 +45,19 @@ A interpolação `{{}}` permite que o template acesse algum dado disponível do 
   Soma 1+1 = {{1+1}}
 </h3>
 ```
+
+### Componente controlador
+```typescript
+//...
+export class NovoComponenteComponent{
+  nome = 'Jack Bauer';
+  idade = 35;
+
+  getIdade() {
+    return this.idade;
+  }
+//...
+```
+### Visualização
+![02](https://user-images.githubusercontent.com/23413093/44951998-d7baf680-ae49-11e8-96db-c25946f4c5bf.png)
+
