@@ -97,5 +97,18 @@ export class EventBindingComponent {
 #### Visualização
 ![03](https://user-images.githubusercontent.com/23413093/44952756-f0cda280-ae5d-11e8-8388-46a5af3ae296.png)
 
+## Usando Property Binding
 
+O uso do property binding permite interagir com as propriedades do html ou dos componentes customizados e funciona de forma semelhante a interpolação.
+Property binding pode vincular uma propriedade de um elemento à uma expressão typeScript.
 
+- Declarada com o prefixo bind `bind-propriedadeDoElemento="variavelDoComponente"` ou `[propriedadeDoElemento]="variavelDoComponente"`.
+
+### Exemplo:
+
+- Desabilitar o botão enquanto o input da descrição não possuir caracteres.
+```html
+  <button type="button" [disabled]="descricao.length == 0">Cadastrar</button>
+```
+#### Visualização
+![04](https://user-images.githubusercontent.com/23413093/44952922-89b1ed00-ae61-11e8-9244-dcb971e9f18e.png)

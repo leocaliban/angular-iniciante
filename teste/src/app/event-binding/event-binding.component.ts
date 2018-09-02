@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventBindingComponent implements OnInit {
 
-  descricao = '*';
+  descricao = '';
   valor = 0;
 
   constructor() { }
