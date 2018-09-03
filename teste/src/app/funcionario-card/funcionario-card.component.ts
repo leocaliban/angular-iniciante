@@ -14,4 +14,10 @@ export class FuncionarioCardComponent implements OnInit {
   ngOnInit() {
   }
 
+  getEstiloCard() {
+    return {
+      backgroundColor: this.funcionario.id % 2 === 0 ? 'rgb(169, 252, 169)' : 'rgb(95, 183, 224)'
+    };
+  }
+
 }
