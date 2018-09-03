@@ -9,11 +9,13 @@ export class EventBindingComponent implements OnInit {
 
   descricao = '';
   valor = 0;
+  cadastrado = false;
 
   constructor() { }
 
   cadastrarDespesa(valor: number) {
     this.valor = valor;
+    this.cadastrado = true;
   }
 
   ngOnInit() {

@@ -1,5 +1,11 @@
 <div class="container">
-  <div class="alert alert-primary" role="alert">
+
+  <div class="alert alert-primary" role="alert" *ngIf="cadastrado" ><!-- diretiva estrutural -->
+    Despesa: <strong>{{descricao}}</strong>
+    valor <strong>{{valor}}</strong> reais.
+  </div>
+
+  <div class="alert alert-primary" role="alert" [hidden]="!cadastrado"> <!-- diretiva de atributo -->
     Despesa: <strong>{{descricao}}</strong>
     valor <strong>{{valor}}</strong> reais.
   </div>
@@ -9,7 +15,7 @@
       <div class="form-group">
         <label for="descricao-id">Descrição</label>
         <input type="text" class="form-control" id="descricao-id"
-          placeholder="Digite a descrição" [(ngModel)]="descricao">
+          placeholder="Digite a descrição" [(ngModel)]="descricao" (focus)="cadastrado = false">
       </div>
       <div class="form-group">
         <label for="valor">Valor</label>

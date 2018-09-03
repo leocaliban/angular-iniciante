@@ -118,8 +118,22 @@ Ou
 ## Usando Two-way data binding
 
 Two-way data binding faz a via dupla da interação componente/template.
-`[(ngModel)]="variavelDoComponente"`
+>`[(ngModel)]="variavelDoComponente"`
 
 Se a propriedade estiver dentro de um form é preciso usar também `[ngModelOptions]="{standalone: true}"`.
 
 *Importar o `FormsModule` no módulo que será usado.*
+
+## Usando Diretivas condicionais
+
+Uma diretiva condicional estrutural pode ser representada por `*ngIf="variavelDeCondicaoDoComponente"`, a diretiva estrutural altera a estrutura do DOM quando a condição é atendida.
+
+Uma diretiva condicional de atributo pode ser representada por `[hidden]="variavelDeCondicaoDoComponente"`, a diretiva de atributo nesse caso não altera a DOM, ela simplesmente cumpre a função do atributo.
+
+## Iterando com Diretivas
+
+O `*ngFor` é uma diretiva estrutural que percorre uma determinada coleção do componente.
+* Repetir a div para cada elemento 'x' da coleção de funcionários
+```html
+  <div *ngFor="let x of funcionarios">
+```
