@@ -7,5 +7,6 @@
     <p class="card-text">
       {{funcionario.profissao}}
     </p>
+    <span [ngClass]="{ badge: true, 'badge-success' : isOk(), 'badge-danger' : !isOk() }">OK</span>
   </div>
 </div>

@@ -20,4 +20,13 @@ export class FuncionarioCardComponent implements OnInit {
     };
   }
 
+  // outra forma de aplicar classes
+  getClassesCss() {
+    return ['badge', 'badge-light'];
+  }
+
+  isOk() {
+    return this.funcionario.nome.startsWith('A');
+  }
+
 }
