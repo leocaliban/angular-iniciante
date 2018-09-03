@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { NovoComponenteComponent } from './novo-componente/novo-componente.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { AdicionarCardsComponent } from './adicionar-cards/adicionar-cards.component';
+import { FuncionarioCardComponent } from './funcionario-card/funcionario-card.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { AdicionarCardsComponent } from './adicionar-cards/adicionar-cards.compo
     AppComponent,
     NovoComponenteComponent,
     EventBindingComponent,
-    AdicionarCardsComponent
+    AdicionarCardsComponent,
+    FuncionarioCardComponent
   ],
   imports: [
     BrowserModule,
