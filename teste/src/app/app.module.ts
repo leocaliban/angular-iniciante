@@ -8,6 +8,7 @@ import { NovoComponenteComponent } from './novo-componente/novo-componente.compo
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { AdicionarCardsComponent } from './adicionar-cards/adicionar-cards.component';
 import { FuncionarioCardComponent } from './funcionario-card/funcionario-card.component';
+import { FuncionarioFormComponent } from './funcionario-form/funcionario-form.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { FuncionarioCardComponent } from './funcionario-card/funcionario-card.co
     NovoComponenteComponent,
     EventBindingComponent,
     AdicionarCardsComponent,
-    FuncionarioCardComponent
+    FuncionarioCardComponent,
+    FuncionarioFormComponent
   ],
   imports: [
     BrowserModule,

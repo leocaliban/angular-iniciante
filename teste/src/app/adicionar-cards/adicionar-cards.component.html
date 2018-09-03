@@ -1,28 +1,6 @@
 <div class="container">
 
-    <div class="alert alert-success" role="alert" *ngIf="cadastrado" ><!-- diretiva estrutural -->
-      <strong>{{nome}} </strong>Cadastrada.
-    </div>
-
-    <h3>Cadastro de pessoas</h3>
-
-    <div class="container">
-        <div class="form-group">
-          <label for="nome-id">Nome</label>
-          <input type="text" class="form-control" id="nome-id"
-            placeholder="Digite o nome" [(ngModel)]="nome" (focus)="cadastrado = false" #nomeInput>
-        </div>
-        <div class="form-group">
-          <label for="profissao-id">Profissão</label>
-          <input type="text" class="form-control" id="profissao-id"
-            placeholder="Digite a profissão" [(ngModel)]="profissao" #profissaoInput>
-        </div>
-
-        <button type="button" class="btn btn-primary" (click)="cadastrar(nomeInput.value, profissaoInput.value)"
-          [disabled]="ocultarBotao()">
-          Cadastrar
-        </button>
-    </div>
+    <app-funcionario-form (funcionarioAdicionado)="aoAdicionar($event)"></app-funcionario-form>
 
     <div class="container">
       <div class="row" style="margin-top: 20px">
