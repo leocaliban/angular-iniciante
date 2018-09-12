@@ -137,3 +137,35 @@ O `*ngFor` é uma diretiva estrutural que percorre uma determinada coleção do 
 ```html
   <div *ngFor="let x of funcionarios">
 ```
+
+## Criando Diretivas Customizadas
+
+Para criar uma diretiva, execute `ng g d nome-da-diretiva`.
+
+### Exemplo de diretiva:
+
+- Essa diretiva altera a cor de fundo do elemento html
+```typescript
+@Directive({
+  selector: '[appCampoColorido]'
+})
+export class CampoColoridoDirective {
+
+  constructor(
+    private elementRef: ElementRef, // manipula o elemento DOM
+    private renderer: Renderer2 // abstrai a manipulação do elemento
+  ) {
+    this.renderer.setStyle(this.elementRef.nativeElement, 'background-color', 'yellow');
+  }
+}
+```
+
+- Para aplicar a diretiva em um elemento html é preciso usar o seletor `selector: '[appCampoColorido]'`.
+
+- A injeção do `ElementRef` e `Renderer2` é feita automaticamente pelo CLI, basta usar o seletor em algum elemento.
+
+```html
+<input type="text" class="form-control"  appCampoColorido>
+```
+
+

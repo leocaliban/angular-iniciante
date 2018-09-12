@@ -9,6 +9,7 @@ import { EventBindingComponent } from './event-binding/event-binding.component';
 import { AdicionarCardsComponent } from './adicionar-cards/adicionar-cards.component';
 import { FuncionarioCardComponent } from './funcionario-card/funcionario-card.component';
 import { FuncionarioFormComponent } from './funcionario-form/funcionario-form.component';
+import { CampoColoridoDirective } from './campo-colorido.directive';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { FuncionarioFormComponent } from './funcionario-form/funcionario-form.co
     EventBindingComponent,
     AdicionarCardsComponent,
     FuncionarioCardComponent,
-    FuncionarioFormComponent
+    FuncionarioFormComponent,
+    CampoColoridoDirective
   ],
   imports: [
     BrowserModule,
