@@ -162,10 +162,25 @@ export class CampoColoridoDirective {
 
 - Para aplicar a diretiva em um elemento html é preciso usar o seletor `selector: '[appCampoColorido]'`.
 
-- A injeção do `ElementRef` e `Renderer2` é feita automaticamente pelo CLI, basta usar o seletor em algum elemento.
+- A injeção do `ElementRef` e `Renderer2` é feita automaticamente pelo CLI, basta usar o seletor em algum elemento. Através do construtor a diretiva é aplicada imediatamente em sua chamada.
 
 ```html
 <input type="text" class="form-control"  appCampoColorido>
 ```
+
+### Exemplo de diretiva com @HostListener:
+
+Agora queremos aplicar a mesma diretiva criada acima, para ser aplicada quando o elemento ganhar o foco.
+
+Para isso iremos usar o `@HostListener()` ele será o ouvinte do elemento, o evento que queremos capturar será passado como parâmetro no mesmo.
+
+- Criar um método para aplicar a diretiva:
+```typescript
+  @HostListener('focus') // evento que será escutado pelo método (quando ocorrer foco o método será chamado).
+  aoGanharFoco() { 
+    this.renderer.setStyle(this.elementRef.nativeElement, 'background-color', 'yellow');
+  }
+```
+
 
 
