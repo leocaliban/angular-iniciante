@@ -8,6 +8,8 @@ import { NgForm } from '@angular/forms';
 })
 export class NovoFormularioComponent implements OnInit {
 
+  profissaoPadrao = 'Empresário';
+
   profissoes = ['Empresário', 'Médico', 'Vendedor', 'Policial'];
 
   constructor() { }
@@ -16,7 +18,7 @@ export class NovoFormularioComponent implements OnInit {
   }
 
   salvar(form: NgForm) {
-    console.log(form);
+    console.log(this.profissaoPadrao);
   }
 
 }
