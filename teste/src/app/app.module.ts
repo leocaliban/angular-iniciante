@@ -10,6 +10,7 @@ import { AdicionarCardsComponent } from './adicionar-cards/adicionar-cards.compo
 import { FuncionarioCardComponent } from './funcionario-card/funcionario-card.component';
 import { FuncionarioFormComponent } from './funcionario-form/funcionario-form.component';
 import { CampoColoridoDirective } from './campo-colorido.directive';
+import { CampoColoridoHbDirective } from './campo-colorido-hb.directive';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { CampoColoridoDirective } from './campo-colorido.directive';
     AdicionarCardsComponent,
     FuncionarioCardComponent,
     FuncionarioFormComponent,
-    CampoColoridoDirective
+    CampoColoridoDirective,
+    CampoColoridoHbDirective
   ],
   imports: [
     BrowserModule,

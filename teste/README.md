@@ -182,5 +182,25 @@ Para isso iremos usar o `@HostListener()` ele será o ouvinte do elemento, o eve
   }
 ```
 
+### Exemplo de diretiva com @HostBinding:
+
+O `@HostBinding` substitui a necessidade de usar `ElementRef` e `Renderer2` para manipular os estados dos elementos.
+
+- Alterando a classe para atender o mesmo objetivo do exemplo anterior
+```typescript
+...
+export class CampoColoridoHbDirective {
+
+  @HostBinding('style.backgroundColor') corDeFundo: string;
+
+  @HostListener('focus') aoGanharFoco() {
+    this.corDeFundo = 'pink';
+  }
+...
+```
+Agora as alterações serão feitas baseadas no atributo `corDeFundo` que está anotada com `@HostBinding` e seu parâmetro indica o que será manipulado `('style.backgroundColor')`.
+
+
+
 
 
