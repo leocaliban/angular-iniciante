@@ -225,7 +225,7 @@ Esse trecho recebe do template a cor secundária que será aplicada ao perder o 
 
 - Com a diretiva exposta, no template devemos declarar uma variável local que aponte para o 'nomeDeAcesso' da diretiva:
 ```html
-<input type="text" appCampoColoridoHb [corSecundaria]="'orange'" #campo="nomeDeAcesso">
+<input type="text" appCampoColoridoHb [corSecundaria]="'orange'" #campo="colorirCampo">
 ```
 A partir da variável `#campo` podemos chamar os métodos da diretiva. Ex: `(click)="campo.aoGanharFoco()"`.
 
