@@ -213,6 +213,21 @@ Para alterar o comportamento do elemento via property binding é necessário cri
 ```
 Esse trecho recebe do template a cor secundária que será aplicada ao perder o foco, o `@HostBinding` permanece como no exemplo anterior e no template informamos a cor secundária no elemento `[corSecundaria]="'orange'"`.
 
+### Expondo os métodos da diretiva para o template:
+
+- Para expor a API da diretiva, precisamos acrescentar o `exportAs: 'nomeDeAcesso'`:
+```typescript
+@Directive({
+  selector: '[appCampoColoridoHb]',
+  exportAs: 'colorirCampo'
+})
+```
+
+- Com a diretiva exposta, no template devemos declarar uma variável local que aponte para o 'nomeDeAcesso' da diretiva:
+```html
+<input type="text" appCampoColoridoHb [corSecundaria]="'orange'" #campo="nomeDeAcesso">
+```
+A partir da variável `#campo` podemos chamar os métodos da diretiva. Ex: `(click)="campo.aoGanharFoco()"`.
 
 
 

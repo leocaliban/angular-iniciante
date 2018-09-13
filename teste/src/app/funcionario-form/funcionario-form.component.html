@@ -13,6 +13,7 @@
     <div class="form-group">
       <label for="profissao-id">Profissão</label>
       <input type="text" class="form-control" id="profissao-id" appCampoColoridoHb [corSecundaria]="'orange'"
+        #campo="colorirCampo"
         placeholder="Digite a profissão" [(ngModel)]="profissao" #profissaoInput>
     </div>
 
@@ -20,4 +21,7 @@
       [disabled]="ocultarBotao()">
       Cadastrar
     </button>
+
+    <button type="button" class="btn btn-info" (click)="campo.aoPerderFoco()">Laranja</button>
+    <button type="button" class="btn btn-info" (click)="campo.aoGanharFoco()">Rosa</button>
 </div>
