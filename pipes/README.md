@@ -43,3 +43,4 @@ De acordo com a necessidade o pipe também pode ser encadeado:
 {{ preco | number:'1.2-2' }}
 {{ troco | currency:'BRL' }}
 ```
+![06](https://user-images.githubusercontent.com/23413093/45508389-15355300-b76b-11e8-9b6b-1d245c57d1c7.png)
