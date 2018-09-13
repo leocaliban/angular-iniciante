@@ -8,6 +8,8 @@ import { NgForm } from '@angular/forms';
 })
 export class NovoFormularioComponent implements OnInit {
 
+  profissoes = ['Empresário', 'Médico', 'Vendedor', 'Policial'];
+
   constructor() { }
 
   ngOnInit() {
