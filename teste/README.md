@@ -200,6 +200,20 @@ export class CampoColoridoHbDirective {
 ```
 Agora as alterações serão feitas baseadas no atributo `corDeFundo` que está anotada com `@HostBinding` e seu parâmetro indica o que será manipulado `('style.backgroundColor')`.
 
+### Fazendo property binding em diretiva customizada:
+
+Para alterar o comportamento do elemento via property binding é necessário criar uma propriedade no componente e indicar (`@Input()`) que ela irá receber um valor vindo do template.
+```typescript
+...
+@Input() corSecundaria = 'transparent';
+...
+@HostListener('blur') aoPerderFoco() {
+    this.corDeFundo = this.corSecundaria;
+  }
+```
+Esse trecho recebe do template a cor secundária que será aplicada ao perder o foco, o `@HostBinding` permanece como no exemplo anterior e no template informamos a cor secundária no elemento `[corSecundaria]="'orange'"`.
+
+
 
 
 
