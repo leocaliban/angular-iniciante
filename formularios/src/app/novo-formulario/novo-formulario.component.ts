@@ -30,6 +30,7 @@ export class NovoFormularioComponent implements OnInit {
     // this.cliente.profissao = form.value.profissao;
 
     console.log(this.cliente);
+    form.reset({ profissao: '' });
   }
 
 }
