@@ -4,7 +4,7 @@ import { NgForm } from '@angular/forms';
 class Cliente {
   nome: string;
   email: string;
-  profissao: string;
+  profissao = '';
 }
 
 @Component({
@@ -15,8 +15,6 @@ class Cliente {
 export class NovoFormularioComponent implements OnInit {
 
   cliente = new Cliente();
-
-  profissaoPadrao = 'Empresário';
 
   profissoes = ['Empresário', 'Médico', 'Vendedor', 'Policial'];
 
