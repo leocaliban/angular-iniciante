@@ -25,7 +25,7 @@ Quando um módulo precisar utilizar um componente de outro módulo, é preciso d
 ...
   declarations: [Componente],
   exports: [Componente] // <---- apontar a exportação do componente para que seja acessado pelo outro módulo
-})
+...
 ```
 Feito isso, o template do Módulo 1 reconhecerá o componente do Módulo 2.
 
