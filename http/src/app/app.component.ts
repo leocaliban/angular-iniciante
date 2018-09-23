@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CidadeService } from './cidade.service';
+import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-root',
@@ -20,18 +21,35 @@ export class AppComponent implements OnInit {
   }
 
   adicionar(nome: string) {
-    this.cidadeService.adicionar({ nome }).then( cidade => {
+    this.cidadeService.adicionar({ nome }).then(cidade => {
       this.buscar();
     });
   }
 
   excluir(id: number) {
     this.cidadeService.excluir(id).then(() => {
+      this.alertaSucesso('Excluído com sucesso!');
       this.buscar();
     });
   }
 
   atualizar(cidade: any) {
-    alert(JSON.stringify(cidade));
+    this.cidadeService.atualizar(cidade).then(() => {
+      this.alertaSucesso('Atualizado com sucesso!');
+      this.buscar();
+    });
+  }
+
+  alertaSucesso(mensagem: string) {
+    toast({
+      type: 'success',
+      title: mensagem
+    });
   }
 }
+const toast = swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 3000
+});
