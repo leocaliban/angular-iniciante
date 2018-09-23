@@ -8,11 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FuncionarioFormComponent implements OnInit {
 
-  funcionarioService: FuncionarioService;
-
-  constructor() {
-    this.funcionarioService = new FuncionarioService();
-   }
+  constructor(
+    private funcionarioService: FuncionarioService
+    ) {}
 
   ngOnInit() {
   }
