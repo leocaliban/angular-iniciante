@@ -1,20 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CidadeService } from './cidade.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  cidades = [
-    { id: 1, nome: 'São Paulo' },
-    { id: 2, nome: 'Rio de Janeiro' },
-    { id: 3, nome: 'Recife' },
-    { id: 4, nome: 'Natal' }
-  ];
+export class AppComponent implements OnInit {
+  cidades = [];
+
+  constructor(private cidadeService: CidadeService) { }
+
+  ngOnInit() {
+    this.buscar();
+  }
+
+  buscar() {
+    this.cidadeService.consultar().then(cidadesApi => { this.cidades = cidadesApi; });
+  }
 
   adicionar(nome: string) {
-    alert(nome);
+    this.cidadeService.adicionar({ nome }).then( cidade => {
+      this.buscar();
+    });
   }
 
   excluir(id: number) {
