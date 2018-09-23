@@ -30,6 +30,8 @@ export class AppComponent implements OnInit {
     this.cidadeService.excluir(id).then(() => {
       this.alertaSucesso('Excluído com sucesso!');
       this.buscar();
+    }).catch(erro => {
+      this.alertaErro(erro);
     });
   }
 
@@ -37,12 +39,21 @@ export class AppComponent implements OnInit {
     this.cidadeService.atualizar(cidade).then(() => {
       this.alertaSucesso('Atualizado com sucesso!');
       this.buscar();
+    }).catch(erro => {
+      this.alertaErro(erro);
     });
   }
 
   alertaSucesso(mensagem: string) {
     toast({
       type: 'success',
+      title: mensagem
+    });
+  }
+
+  alertaErro(mensagem: string) {
+    toast({
+      type: 'error',
       title: mensagem
     });
   }

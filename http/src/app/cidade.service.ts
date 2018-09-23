@@ -20,11 +20,18 @@ export class CidadeService {
   }
 
   atualizar(cidade: any): Promise<any> {
-    return this.http.put(`http://localhost:3000/cidades/${cidade.id}`, cidade).toPromise().then(response => response.json());
+    return this.http.put(`http://localhost:3000/cidades/${cidade.id}`, cidade)
+      .toPromise()
+      .then(response => response.json()).catch(erro => {
+        return Promise.reject(`Erro ao alterar a cidade código ${cidade.id}.`);
+      });
   }
 
   excluir(id: number): Promise<void> {
     return this.http.delete(`http://localhost:3000/cidades/${id}`)
-      .toPromise().then(() => null);
+      .toPromise()
+      .then(response => response.json()).catch(erro => {
+        return Promise.reject(`Erro ao excluir a cidade código ${id}.`);
+      });
   }
 }

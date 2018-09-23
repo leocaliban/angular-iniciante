@@ -1,20 +1,20 @@
 {
   "cidades": [
     {
-      "nome": "Patos",
-      "id": 1
+      "nome": "Natal",
+      "id": 4
     },
     {
-      "nome": "Goiânia",
-      "id": 2
+      "nome": "Patos",
+      "id": 5
     },
     {
       "nome": "São Paulo",
-      "id": 3
+      "id": 6
     },
     {
-      "nome": "Natal",
-      "id": 4
+      "nome": "Monteiro",
+      "id": 7
     }
   ]
 }
