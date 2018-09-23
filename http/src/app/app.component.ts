@@ -26,7 +26,9 @@ export class AppComponent implements OnInit {
   }
 
   excluir(id: number) {
-    alert(id);
+    this.cidadeService.excluir(id).then(() => {
+      this.buscar();
+    });
   }
 
   atualizar(cidade: any) {
